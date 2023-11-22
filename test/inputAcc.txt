@@ -7,7 +7,7 @@
 
 <h2>HTML Forms</h2>
 
-<form action="/action_page.php" method="TEMBAK">
+<form action="/action_page.php" method="GET">
   <div id="label">First name:</div><br>
   <input type="text" id="fname"><br>
   <div id="label">Last name:</div><br>

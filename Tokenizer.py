@@ -1,6 +1,5 @@
 import sys
 import re
-from fa import *
 import os
 
 
