@@ -133,16 +133,4 @@ def createToken(fileName):
     for token in tokens:
         tokenResult.append(token)
 
-    # # Write file testing
-    # path = os.getcwd()
-    # fileWrite = open(path + "/result/tokenResult.txt", 'w')
-    # for token in tokenResult:
-    #     fileWrite.write(str(token)+" ")
-    #     # print(token)
-    # fileWrite.close()
-
-    return " ".join(tokenResult)
-
-if __name__ == "__main__": 
-    path = os.getcwd()
-    print(createToken(path + "/test/inputAcc.txt"))
+    return tokenResult
