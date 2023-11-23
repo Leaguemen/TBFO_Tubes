@@ -1,0 +1,12 @@
+Q P F
+0 1
+Z Y
+Q
+Z
+F
+E
+Q 0 Z Q Y,Z
+Q 0 Y Q Y,Y
+Q e Y P Y
+P 1 Y P e
+P e Z F e
