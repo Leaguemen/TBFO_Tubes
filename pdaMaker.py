@@ -51,25 +51,27 @@ for i in range(7,len(lines)):
 
 
 #input ada di sini
-print(arrProdRule)
-# start_input = createToken("html/inputAcc.txt")
-tokens = [0,0,0,"e",1,1,1]
+# print(arrProdRule)
+tokens= createToken("html/inputAcc.txt")
+print(tokens)
+# tokens = [0,0,0,"e",1,1,1]
 # generate(start_symbol, start_input, start_stack, (start_symbol, start_input, start_stack))
 
 for i in range(len(tokens)):
+    print("\nSTACK\n", pda_stack)
     first_three_elements = (current_state,str(tokens[i]),head(pda_stack))
     rule_index = find_index(first_three_elements)
+    print(first_three_elements)
     if  rule_index != -1:
         current_state = arrProdRule[rule_index][3]
         if ',' in arrProdRule[rule_index][4]:
             string_split = split_string_into_words(arrProdRule[rule_index][4])
-            if head(pda_stack) == string_split[1]:
+            if head(pda_stack) != string_split[1]:
                 pda_stack.pop()
                 pda_stack.append(string_split[1])
                 pda_stack.append(string_split[0])
             else:
-                pda_stack.pop()
-                pda_stack.append(string_split[1])
+                pda_stack.append(string_split[0])
         else:
             if arrProdRule[rule_index][4] == "e":
                 pda_stack.pop()
@@ -80,6 +82,7 @@ for i in range(len(tokens)):
         pda_stack =[]
         break
 
+print(pda_stack)
 if pda_stack == acceptCondition:
     print("Accepted")
 else:
