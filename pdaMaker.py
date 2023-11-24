@@ -79,8 +79,29 @@ for i in range(len(tokens)):
                 pda_stack.pop()
                 pda_stack.append(arrProdRule[rule_index][4])
     else:
-        pda_stack =[]
-        break
+        #########################################################
+        first_three_elements = (current_state,"e",head(pda_stack))
+        rule_index = find_index(first_three_elements)
+        if  rule_index != -1:
+            current_state = arrProdRule[rule_index][3]
+            if ',' in arrProdRule[rule_index][4]:
+                string_split = split_string_into_words(arrProdRule[rule_index][4])
+                if head(pda_stack) != string_split[1]:
+                    pda_stack.pop()
+                    pda_stack.append(string_split[1])
+                    pda_stack.append(string_split[0])
+                else:
+                    pda_stack.append(string_split[0])
+            else:
+                if arrProdRule[rule_index][4] == "e":
+                    pda_stack.pop()
+                else:
+                    pda_stack.pop()
+                    pda_stack.append(arrProdRule[rule_index][4])
+        ############################################
+        else:
+            pda_stack =[]
+            break
 
 print(pda_stack)
 if pda_stack == acceptCondition:
