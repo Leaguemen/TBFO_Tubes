@@ -1,33 +1,32 @@
 <html>
   <head>
     <title></title>
-    <link rel="stylesheet" href="kamo" />
+    <link rel="stylesheet" href="kamo">
     <script></script>
   </head>
   <body>
     <h1>aku <em>masa sih</em> suka kamu</h1>
     <h2>
-      aku suka <br />
+      aku suka <br>
       kamu
     </h2>
-    <hr/>
+    <hr>
     <h3>aku <b>masa koy</b>suka kamu</h3>
     <div>
       <p>musang king <abbr>kuyang</abbr>paling sedap</p>
-      <img src="lama" alt="smsms" />
+      <img src="lama" alt="smsms" >
       <div>
-        <button type="lslsls">lama</button>
-        <form action="">
+        <button type="submit">lama</button>
+        <form action="" method="GET">
           <p>lama</p>
           <h1>lama</h1>
-          <input type="text" name="" id="" />
+          <input type="text" id="lalal" >
         </form>
         <table>
           <tr>
-            mama
-          </tr>
-          <td>mulai</td>
           <th>alala</th>
+          <td>mulai</td>
+          </tr>
         </table>
       </div>
     </div>

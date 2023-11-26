@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>My HTML Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <h1>Main Heading</h1>
+    <h2>Subheading</h2>
+    <p>This is a paragraph with <em>emphasized</em>, <b>bold</b>, and <strong>very strong</strong> text.</p>
+    <p>Another paragraph with a line break.<br>And more text on a new line.</p>
+    <abbr>This is a text with abbr tag</abbr>
+    <small>This is small text.</small>
+    <hr>
+    <div>
+        <a href="https://example.com">Visit Example.com</a>
+        <img src="image.jpg" alt="A descriptive image">
+        <button type="button">Click me</button>
+    </div>
+    <form action="/submit" method="POST">
+        <input type="text">
+        <input type="password">
+        <button type="submit">Click me</button>
+    </form>
+    <table>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+        <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+        </tr>
+        <tr>
+            <td>Data 3</td>
+            <td>Data 4</td>
+        </tr>
+    </table>
+
+</body>
+</html>

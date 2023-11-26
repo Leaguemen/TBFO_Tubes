@@ -1,0 +1,65 @@
+<html>
+<head>
+    <!-- Head Section -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <!-- Main Content -->
+    <h1>Main Heading</h1>
+    <h2>Subheading</h2>
+    <p>This is a paragraph with <em>emphasized</em>, <b>bold</b>, and <strong>"strong"</strong> text.</p>
+    <p>Another paragraph with a line break.<br>And more text on a new line.</p>
+    
+    <!-- Abbreviation -->
+    <abbr>"abbr"</abbr> <!-- No title attribute -->
+
+    <!-- Small Text -->
+    <small>This is small text.</small>
+
+    <!-- Horizontal Rule -->
+    <hr>
+
+    <!-- Container -->
+    <div>
+        <!-- Link -->
+        <a href="https://example.com">Visit Example.com</a>
+
+        <!-- Image -->
+        <img src="image.jpg" alt="A descriptive image">
+
+        <!-- Button -->
+        <button type="button">Click me</button>
+    </div>
+
+    <!-- Form -->
+    <form action="/submit" method="POST">
+        <!-- Input Fields -->
+        <input type="text">
+        <input type="password">
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Table -->
+    <table>
+    <!-- Table Header -->
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+    <!-- Table Body -->
+        <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+        </tr>
+        <tr>
+            <td>Data 3</td>
+            <td>Data 4</td>
+        </tr>
+    </table>
+
+</body>
+</html>
