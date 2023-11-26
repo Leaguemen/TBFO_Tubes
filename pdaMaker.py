@@ -1,4 +1,4 @@
-from Tokenizer import *
+from tokenizer.Tokenizer import *
 
 start_input = ""  # input word to be found or not found
 found = False  # stores found state
@@ -35,7 +35,7 @@ def split_string_into_words(input_string):
 
 #main
 
-file = open("pda.txt", "r")
+file = open("PDA\\pda.txt", "r")
 lines =[line.rstrip().split() for line in file]
 current_state = lines[3][0]
 pda_stack = [lines[4][0]]
@@ -54,7 +54,7 @@ for i in range(7,len(lines)):
 # print(arrProdRule)
 file = input(str("Masukkan file txt yang mengandung HTML yang ingin diuji : "))
 tokens= createToken("html/"+ file)
-# print(tokens)
+print(tokens)
 # tokens = [0,0,0,"e",1,1,1]
 # generate(start_symbol, start_input, start_stack, (start_symbol, start_input, start_stack))
 
@@ -62,10 +62,10 @@ i = 0
 length = len(tokens)
 
 while i < length:
-    # print("\n\nSTACK\n", pda_stack, "\n")
+    print("\n\nSTACK\n", pda_stack, "\n")
     first_three_elements = (current_state,str(tokens[i]),head(pda_stack))
     rule_index = find_index(first_three_elements)
-    # print(first_three_elements)
+    print(first_three_elements)
     if  rule_index != -1:
         current_state = arrProdRule[rule_index][3]
         if ',' in arrProdRule[rule_index][4]:
@@ -109,7 +109,7 @@ while i < length:
             pda_stack =[]
             break
 
-# print(pda_stack)
+print(pda_stack)
 if pda_stack == acceptCondition:
     print("Accepted")
 else:
