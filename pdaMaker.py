@@ -57,8 +57,11 @@ print(tokens)
 # tokens = [0,0,0,"e",1,1,1]
 # generate(start_symbol, start_input, start_stack, (start_symbol, start_input, start_stack))
 
-for i in range(len(tokens)):
-    print("\nSTACK\n", pda_stack)
+i = 0
+length = len(tokens)
+
+while i < length:
+    print("\n\nSTACK\n", pda_stack, "\n")
     first_three_elements = (current_state,str(tokens[i]),head(pda_stack))
     rule_index = find_index(first_three_elements)
     print(first_three_elements)
@@ -78,6 +81,7 @@ for i in range(len(tokens)):
             else:
                 pda_stack.pop()
                 pda_stack.append(arrProdRule[rule_index][4])
+        i +=1
     else:
         #########################################################
         first_three_elements = (current_state,"e",head(pda_stack))
@@ -98,6 +102,7 @@ for i in range(len(tokens)):
                 else:
                     pda_stack.pop()
                     pda_stack.append(arrProdRule[rule_index][4])
+            print("KENA EPSILON")
         ############################################
         else:
             pda_stack =[]
