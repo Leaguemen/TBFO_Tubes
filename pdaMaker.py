@@ -52,8 +52,9 @@ for i in range(7,len(lines)):
 
 #input ada di sini
 # print(arrProdRule)
-tokens= createToken("html/inputAcc.txt")
-print(tokens)
+file = input(str("Masukkan file txt yang mengandung HTML yang ingin diuji : "))
+tokens= createToken("html/"+ file)
+# print(tokens)
 # tokens = [0,0,0,"e",1,1,1]
 # generate(start_symbol, start_input, start_stack, (start_symbol, start_input, start_stack))
 
@@ -61,10 +62,10 @@ i = 0
 length = len(tokens)
 
 while i < length:
-    print("\n\nSTACK\n", pda_stack, "\n")
+    # print("\n\nSTACK\n", pda_stack, "\n")
     first_three_elements = (current_state,str(tokens[i]),head(pda_stack))
     rule_index = find_index(first_three_elements)
-    print(first_three_elements)
+    # print(first_three_elements)
     if  rule_index != -1:
         current_state = arrProdRule[rule_index][3]
         if ',' in arrProdRule[rule_index][4]:
@@ -102,13 +103,13 @@ while i < length:
                 else:
                     pda_stack.pop()
                     pda_stack.append(arrProdRule[rule_index][4])
-            print("KENA EPSILON")
+            #print("KENA EPSILON")
         ############################################
         else:
             pda_stack =[]
             break
 
-print(pda_stack)
+# print(pda_stack)
 if pda_stack == acceptCondition:
     print("Accepted")
 else:
